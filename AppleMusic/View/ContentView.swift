@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isButton = false
+    
     var body: some View {
         NavigationView{
             textScreenView
