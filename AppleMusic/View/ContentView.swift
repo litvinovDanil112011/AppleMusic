@@ -12,14 +12,14 @@ struct ContentView: View {
     @State var isButton = false
     
     var body: some View {
+        
         NavigationView{
-            textScreenView
+            TabBar()
             .navigationTitle("Медиатека")
             .navigationBarItems(trailing: NavigationLink("Править", destination: {
                 LibraryView()
             }))
         }
-        
     }
 }
 
