@@ -9,19 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var isButton = false
-    
+    @State private var isButton = false
+
     var body: some View {
         
         NavigationView{
-            TabBar()
+            VStack{
+                PlayerView()
+                
+                TabBar()
+                
             .navigationTitle("Медиатека")
             .navigationBarItems(trailing: NavigationLink("Править", destination: {
                 LibraryView()
             }))
+              }
+            }
         }
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

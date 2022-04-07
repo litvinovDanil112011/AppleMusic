@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TabBar: View {
+    
+    @State var isButton = false
+    
     var body: some View {
         TabView{
             textScreenView
