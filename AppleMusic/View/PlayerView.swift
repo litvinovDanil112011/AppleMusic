@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlayerView: View {
     var body: some View {
-        VStack {
+        VStack{
             HStack {
             Image("1")
                 .resizable()
@@ -32,7 +32,6 @@ struct PlayerView: View {
                 }
             }
             .foregroundColor(.black)
-            
           }
             .padding()
             Divider()

@@ -14,11 +14,10 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            VStack{
-                PlayerView()
-                
+            ZStack{
                 TabBar()
-                
+                PlayerView()
+                    .offset(y: 225)
             .navigationTitle("Медиатека")
             .navigationBarItems(trailing: NavigationLink("Править", destination: {
                 LibraryView()

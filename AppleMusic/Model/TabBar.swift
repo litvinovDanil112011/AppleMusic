@@ -18,18 +18,20 @@ struct TabBar: View {
                     Image(systemName: "music.note.tv.fill")
                     Text("Медиатека")
                 }
-            Text("Two")
+            RadioTabView()
                 .tabItem {
                     Image(systemName: "dot.radiowaves.left.and.right")
                     Text("Радио")
                 }
-            Text("Three")
+            SearchTabView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Поиск")
             }
         }
+        .tint(Color.accentColor)
     }
+        
 }
 
 struct TabBar_Previews: PreviewProvider {
