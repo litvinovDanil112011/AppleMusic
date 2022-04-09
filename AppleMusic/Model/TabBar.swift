@@ -29,7 +29,7 @@ struct TabBar: View {
                     Text("Поиск")
             }
         }
-        .tint(Color.accentColor)
+        .accentColor(.red)
     }
         
 }
