@@ -12,7 +12,9 @@ struct TabBar: View {
     @State var isButton = false
     
     var body: some View {
+
         TabView{
+
             textScreenView
                 .tabItem {
                     Image(systemName: "music.note.tv.fill")
@@ -30,7 +32,7 @@ struct TabBar: View {
             }
         }
         .accentColor(.red)
-    }
+        }
 }
 
 struct TabBar_Previews: PreviewProvider {
