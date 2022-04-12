@@ -21,5 +21,6 @@ import SwiftUI
                 .foregroundColor(.gray)
                 .font(.system(size: 15))
         }
+        .offset(y: -100)
     }
 

@@ -13,7 +13,6 @@ struct LibraryView: View {
     @State private var selectedRow: String?
     
     var body: some View {
-        NavigationView{
             ZStack{
         List(selection: $selectedRow){
             ForEach(arrayCellsLibrary) { cells in
@@ -24,17 +23,24 @@ struct LibraryView: View {
                         .foregroundColor(.red)
                 }
             }
-          //  .onMove(perform: more)
+            .onMove(perform: move)
+           // .onDelete(perform: delete)
+            .navigationBarBackButtonHidden(true)
+          }
+        .navigationBarBackButtonHidden(true)
         }
-        .navigationBarItems(trailing: Button("Готово") {
-        self.prepresentationMode.wrappedValue.dismiss()
-        })
-        }
-    .navigationBarBackButtonHidden(true)
-        }
+    }
 }
+func move(from sourse: IndexSet, to distancion: Int){
+    arrayCellsLibrary.move(fromOffsets: sourse, toOffset: distancion)
 }
-    
+
+//func delete(at offSet: IndexSet){
+//    if let first = offSet.first {
+//        arrayCellsLibrary.remove(at: first)
+//    }
+
+ 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
