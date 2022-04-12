@@ -24,22 +24,14 @@ struct LibraryView: View {
                 }
             }
             .onMove(perform: move)
-           // .onDelete(perform: delete)
-            .navigationBarBackButtonHidden(true)
           }
-        .navigationBarBackButtonHidden(true)
+        .environment(\.editMode, .constant(EditMode.active))
         }
     }
 }
 func move(from sourse: IndexSet, to distancion: Int){
     arrayCellsLibrary.move(fromOffsets: sourse, toOffset: distancion)
 }
-
-//func delete(at offSet: IndexSet){
-//    if let first = offSet.first {
-//        arrayCellsLibrary.remove(at: first)
-//    }
-
  
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
