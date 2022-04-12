@@ -32,12 +32,12 @@ struct PlayerView: View {
                 }
             }
             .foregroundColor(.black)
-            
           }
             .padding()
             Divider()
             .navigationBarBackButtonHidden(true)
         }
+        .background(.white)
     }
 }
 

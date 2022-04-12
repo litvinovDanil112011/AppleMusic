@@ -9,24 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isButton = false
-
+    @State private var isButtonToggle = true
+    
     var body: some View {
-        
-        NavigationView{
-            ZStack{
-                TabBar()
-                PlayerView()
-                    .offset(y: 225)
-            .navigationTitle("Медиатека")
-            .navigationBarItems(trailing: NavigationLink("Править", destination: {
-                LibraryView()
-            }))
-              }
+
+        ZStack(alignment: .bottom){
+                
+            TabView{
+            ScreenMainView()
+                .tabItem {
+                    Image(systemName: "square.stack.fill")
+                    Text("Медиатека")
+                }
+            RadioTabView()
+                .tabItem {
+                    Image(systemName: "dot.radiowaves.left.and.right")
+                    Text("Радио")
+                }
+                SearchTabView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")
+                     }
             }
+            .accentColor(.red)
+                PlayerView()
+                    .offset(y: -48)
         }
     }
-
+}
+    
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
