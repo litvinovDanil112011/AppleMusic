@@ -26,6 +26,7 @@ struct LibraryView: View {
             .onMove(perform: move)
           }
         .environment(\.editMode, .constant(EditMode.active))
+        .navigationBarBackButtonHidden(true)
         }
     }
 }

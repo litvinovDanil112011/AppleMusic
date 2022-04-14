@@ -14,13 +14,11 @@ struct ScreenMainView: View {
     var body: some View {
         NavigationView{
             ZStack{
-
                if isButtonToggle {
                     textScreenView
                 } else {
                     LibraryView()
                 }
-                
             }
             .navigationBarItems(trailing: Button {
                 self.isButtonToggle.toggle()
