@@ -37,6 +37,9 @@ struct RadioTabView: View {
             }
             Divider()
             LazyVGrid(columns: columns, alignment: .leading, spacing: 20) {
+                Text("Cтанции")
+                    .font(.largeTitle)
+                    .padding()
                     ForEach(arrayInfoRadioStation) { items in
                         HStack{
                             items.imageRadioStation
