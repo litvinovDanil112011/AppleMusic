@@ -14,7 +14,7 @@ struct ScreenMainView: View {
     var body: some View {
         NavigationView{
             ZStack{
-               if isButtonToggle {
+                if isButtonToggle {
                     textScreenView
                 } else {
                     LibraryView()
@@ -28,10 +28,10 @@ struct ScreenMainView: View {
                 } else {
                     Text("Готово")
                 }
-           })
+            })
             .navigationTitle("Медиатека")
         }
-  }
+    }
 }
 
 struct ScreenMainView_Previews: PreviewProvider {
